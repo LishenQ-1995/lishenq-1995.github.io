@@ -9,3 +9,5 @@ figure img{display:block;width:100%;height:auto;border-radius:3px}.media-stack{d
 video.ct-comparison{aspect-ratio:1920/608}
 .wide-demo{grid-column:1/-1}video.online-bleeding{aspect-ratio:1806/756}
 video[aria-label="肝脏手术 VLM 微调模型演示"]{aspect-ratio:1920/920}
+
+.compact-images img{max-width:100%;width:auto;margin-inline:auto}.report-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}.report-gallery img{max-width:100%;width:auto;margin-inline:auto}@media(max-width:420px){.report-gallery{grid-template-columns:1fr}.report-gallery figure{justify-self:center}}
