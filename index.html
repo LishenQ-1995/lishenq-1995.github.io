@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="医疗 AI 项目演示分享：细胞检测、手术视频分析，以及 Jetson 与 iPad 端侧部署。">
+  <title>项目演示</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#projects">跳到项目演示</a>
+  <header class="wrap"><a class="name" href="#">项目演示</a><nav aria-label="主导航"><a href="#projects">浏览演示</a><a href="mailto:qls1995@mail.ustc.edu.cn">联系交流 ↗</a></nav></header>
+  <main class="wrap">
+    <section id="projects" aria-labelledby="projects-title">
+      <h1 id="projects-title" class="sr-only">项目演示</h1>
+      <article class="project">
+        <div class="description"><span class="number">01</span><h3>肝脏手术视频理解</h3><p>使用 LLaMA Factory 微调面向肝脏手术的视觉语言模型，展示手术视频输入与交互式问答流程。</p><p class="tech">LLaMA Factory · VLM 微调 · 视频理解</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/liver-vlm.jpg" aria-label="肝脏手术 VLM 微调模型演示"><source src="assets/liver-vlm.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>约 1.68 倍速演示 · 35 秒（非实际推理耗时） · <a href="assets/liver-vlm.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">02</span><h3>出血分割与源点追踪</h3><p>提取手术视频中的血液区域，探索出血事件的时序分析与源点连续追踪。以下为场景验证片段。</p><p class="tech">语义分割 · 时序分析 · Track-On</p></div>
+        <div class="paired">
+          <figure><video controls playsinline preload="none" poster="assets/bleeding.jpg" aria-label="出血分割演示"><source src="assets/bleeding.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>血液区域分割 · <a href="assets/bleeding.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+          <figure><video controls playsinline preload="none" poster="assets/tracking.jpg" aria-label="出血源点追踪演示"><source src="assets/tracking.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>出血源点追踪 · <a href="assets/tracking.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+        </div>
+        <figure class="wide-demo"><video class="online-bleeding" controls playsinline preload="none" poster="assets/online-bleeding.jpg" aria-label="在线出血检测与时序曲线演示"><source src="assets/online-bleeding.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>在线出血检测案例一：同步展示原始画面、出血区域、面积变化曲线与检测提示 · <a href="assets/online-bleeding.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+        <figure class="wide-demo"><video class="online-bleeding" controls playsinline preload="none" poster="assets/online-bleeding-2.jpg" aria-label="在线出血检测案例二"><source src="assets/online-bleeding-2.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>在线出血检测案例二：出血区域变化与时序检测结果 · <a href="assets/online-bleeding-2.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">03</span><h3>双极器械分割与追踪</h3><p>在手术视频中分割双极器械，并展示器械运动过程中的掩膜追踪结果。</p><p class="tech">SAM 2 · 视频分割</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/bipolar.jpg" aria-label="双极器械分割追踪演示"><source src="assets/bipolar.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>器械掩膜追踪 · <a href="assets/bipolar.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">04</span><h3>超声刀动作分析</h3><p>结合手术画面与时间轴查看超声刀相关动作片段，展示视频内容与分析结果的对应关系。</p><p class="tech">手术视频分析 · 动作时间轴</p></div>
+        <div class="media-stack">
+          <figure><a href="assets/ultrasonic-1.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/ultrasonic-1.gif" width="836" height="718" alt="超声刀动作演示一：手术画面及下方动作时间轴"></a><figcaption>动作演示一 · 点击查看原图</figcaption></figure>
+          <figure><a href="assets/ultrasonic-2.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/ultrasonic-2.gif" width="836" height="718" alt="超声刀动作演示二：手术画面及下方动作时间轴"></a><figcaption>动作演示二 · 点击查看原图</figcaption></figure>
+        </div>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">05</span><h3>手术视频深度估计</h3><p>对比原始手术画面与单目深度估计结果，展示器械和组织的相对深度变化。</p><p class="tech">Depth Anything 3 · 单目深度估计</p></div>
+        <div class="media-stack">
+          <figure><a href="assets/depth-1.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/depth-1.gif" width="1008" height="280" alt="手术视频深度估计示例一：左侧原始画面，右侧深度可视化"></a><figcaption>示例一 · 左：原始画面 / 右：深度估计</figcaption></figure>
+          <figure><a href="assets/depth-2.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/depth-2.gif" width="1008" height="280" alt="手术视频深度估计示例二：左侧原始画面，右侧深度可视化"></a><figcaption>示例二 · 点击查看原图</figcaption></figure>
+        </div>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">06</span><h3>Jetson 实时推理</h3><p>在 Jetson Orin NX 上部署手术视觉模型，结合视频采集卡，打通实时采集、推理与结果展示流程。</p><p class="tech">ONNX · TensorRT FP16 · GStreamer</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/jetson.jpg" aria-label="Jetson 实时推理演示"><source src="assets/jetson.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>采集与推理演示 · <a href="assets/jetson.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">07</span><h3>iPad 端侧部署</h3><p>完成手术视觉模型的 CoreML 转换与 iPad 集成，展示器械检测、体腔内外识别和出血分割的端侧运行。</p><p class="tech">PyTorch · TorchScript · CoreML</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/ipad.jpg" aria-label="iPad 端侧部署演示"><source src="assets/ipad.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>iPad 应用录屏 · <a href="assets/ipad.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">08</span><h3>器官分割与三维可视化</h3><p>采用基于 TotalSegmentator 的优化模型版本进行器官分割，在 3D Slicer 中展示 CT 多平面切片与三维分割结果。</p><p class="tech">TotalSegmentator 优化模型 · 3D Slicer</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/organ-segmentation.jpg" aria-label="器官分割与三维可视化演示"><source src="assets/organ-segmentation.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>器官分割结果展示 · <a href="assets/organ-segmentation.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">09</span><h3>CBCT 到合成 CT</h3><p>基于条件扩散模型生成合成 CT，展示合成 CT 与计划 CT 的三维重建结果。</p><p class="tech">条件扩散模型 · 医学影像生成</p></div>
+        <figure><video class="ct-comparison" controls playsinline loop preload="none" poster="assets/ct-comparison.jpg" aria-label="合成 CT 与计划 CT 左右对比演示"><source src="assets/ct-comparison.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>左：合成 CT / 右：计划 CT · <a href="assets/ct-comparison.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">10</span><h3>肿瘤细胞检测与病理分析</h3><p>集成细胞检测与病理图像分析模型，支持批量推理、医生复核及结构化报告生成。</p><p class="tech">D-FINE / YOLO · FastAPI · Vue 3 · Electron</p></div>
+        <figure><video controls playsinline preload="none" poster="assets/cells.jpg" aria-label="细胞检测软件演示"><source src="assets/cells.mp4" type="video/mp4">浏览器不支持视频播放。</video><figcaption>细胞检测软件 · <a href="assets/cells.mp4" target="_blank" rel="noopener">打开视频 ↗</a></figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">11</span><h3>心电分析软件</h3><p>展示静态心电分析中的波形缩放与测量交互，便于查看波形细节和分析参数。</p><p class="tech">心电信号处理 · 波形可视化</p></div>
+        <div class="media-stack">
+          <figure><a href="assets/ecg-zoom.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/ecg-zoom.gif" width="1696" height="937" alt="心电分析软件的波形缩放操作动图"></a><figcaption>波形缩放 · 点击查看原图</figcaption></figure>
+          <figure><a href="assets/ecg-measure.gif" target="_blank" rel="noopener"><img loading="lazy" src="assets/ecg-measure.gif" width="1697" height="935" alt="心电分析软件的波形测量操作动图"></a><figcaption>波形测量 · 点击查看原图</figcaption></figure>
+        </div>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">12</span><h3>轻量化心电降噪</h3><p>结合轻量化 U-Net 与知识蒸馏进行心电降噪。图中对比参考波形、含噪波形，以及不同模型的降噪结果。</p><p class="tech">U-Net · 知识蒸馏 · ECG 降噪</p></div>
+        <figure class="paper-figure"><a href="assets/ecg-denoising.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/ecg-denoising.png" width="603" height="975" alt="论文图 4：参考心电、含噪心电及 FCN、U-net、ULde-net 和知识蒸馏模型的降噪对比"></a><figcaption>心电降噪结果对比 · 点击查看大图</figcaption></figure>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">13</span><h3>QRS 波检测</h3><p>展示多通道心电的 QRS / R 峰定位结果，以及模型输出概率和平滑后的检测曲线。</p><p class="tech">心电信号处理 · R 峰定位</p></div>
+        <div class="media-stack">
+          <figure><a href="assets/qrs-1.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/qrs-1.png" width="2100" height="1500" alt="QRS 检测示例一：三通道心电、R 峰位置和模型概率曲线"></a><figcaption>记录示例一 · 点击查看大图</figcaption></figure>
+          <figure><a href="assets/qrs-2.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/qrs-2.png" width="2100" height="1500" alt="QRS 检测示例二：三通道心电、R 峰位置和模型概率曲线"></a><figcaption>记录示例二 · 点击查看大图</figcaption></figure>
+        </div>
+      </article>
+      <article class="project">
+        <div class="description"><span class="number">14</span><h3>室上性与室性早搏检测</h3><p>基于改进 U-Net 检测室上性早搏（SVEB）与室性早搏（VEB）。图中展示模型输出、平滑处理、早搏位置及参考标注。</p><p class="tech">改进 U-Net · SVEB / VEB 检测</p></div>
+        <figure><a href="assets/ectopic-beats.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/ectopic-beats.png" width="1090" height="1028" alt="论文图 7：SVEB 与 VEB 的模型输出、平滑曲线、检测位置和真实标注"></a><figcaption>早搏定位结果（论文图 7） · 点击查看大图</figcaption></figure>
+      </article>
+    </section>
+  </main>
+  <footer class="wrap"><span>联系交流</span><a href="mailto:qls1995@mail.ustc.edu.cn">qls1995@mail.ustc.edu.cn ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
