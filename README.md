@@ -5,3 +5,6 @@
 网站：https://lishenq-1995.github.io/
 
 联系：qls1995@mail.ustc.edu.cn
+
+
+2026-09-21：超声刀动作演示一替换为归档原始资料“对外demo/2024年06月-超声刀动作/new-PE25.gif”。保留完整约24.4秒动画，两侧各裁279像素，输出836×718的H.264 MP4（CRF 23、yuv420p、faststart、无音轨），同步更新WebP封面。演示二保持原样；原始GIF未修改。
